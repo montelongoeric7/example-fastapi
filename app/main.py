@@ -4,7 +4,6 @@ from random import randrange
 from psycopg2.extras import RealDictCursor
 import time
 from sqlalchemy.orm import Session
-import models
 from database import engine, get_db
 from schemas import PostCreate, UserCreate
 from utils import pwd_context, hash_password
@@ -16,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
