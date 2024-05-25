@@ -2,9 +2,11 @@ from fastapi import APIRouter, HTTPException, status, Depends
 from sqlalchemy.orm import Session
 import app.models as models
 import app.database as database
+from app.database import get_db  # Ensure you import get_db correctly if needed
 import app.schemas as schemas
 import app.oauth2 as oauth2
 import logging
+
 
 router = APIRouter(
     prefix="/vote",

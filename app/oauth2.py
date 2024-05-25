@@ -7,7 +7,7 @@ import app.database as database
 from sqlalchemy.orm import Session
 import app.models as models
 import app.config as config
-from config import settings
+from app.config import settings  # Corrected from relative to absolute import
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")

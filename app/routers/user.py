@@ -1,13 +1,12 @@
-from fastapi import HTTPException, Response, status, Depends, APIRouter
-from random import randrange
-from psycopg2.extras import RealDictCursor
+from fastapi import HTTPException, status, Depends, APIRouter
 from sqlalchemy.orm import Session
 import app.models as models
 import app.database as database
-from database import engine, get_db
-import schemas
-from schemas import UserCreate
-from utils import hash_password
+from app.database import engine, get_db  # Corrected from relative to absolute import
+import app.schemas as schemas  # Corrected for consistency
+from app.schemas import UserCreate  # Corrected from relative to absolute import
+import app.utils as utils  # Corrected for consistency
+from app.utils import hash_password  # Corrected from relative to absolute import
 
 router = APIRouter(
     prefix = "/users",

@@ -1,9 +1,7 @@
 from fastapi import FastAPI
-from random import randrange
 from sqlalchemy.orm import Session
 from app.routers import post, user, auth, vote
 from fastapi.middleware.cors import CORSMiddleware
-
 
 
 

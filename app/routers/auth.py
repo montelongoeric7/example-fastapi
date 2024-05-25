@@ -2,9 +2,9 @@ from fastapi import APIRouter, HTTPException, Depends
 from typing import Optional, List
 from sqlalchemy.orm import Session
 import app.database as database
-from database import get_db
+from app.database import get_db  # Corrected from relative to absolute import
 import app.schemas as schemas
-from schemas import UserLogin
+from app.schemas import UserLogin  # Corrected from relative to absolute import
 import app.models as models
 import app.utils as utils
 import app.oauth2 as oauth2
