@@ -1,12 +1,6 @@
-from fastapi import FastAPI, HTTPException, Response, status, Depends
-from typing import Optional, List
+from fastapi import FastAPI
 from random import randrange
-from psycopg2.extras import RealDictCursor
-import time
 from sqlalchemy.orm import Session
-from database import engine, get_db
-from schemas import PostCreate, UserCreate
-from utils import pwd_context, hash_password
 from routers import post, user, auth, vote
 from fastapi.middleware.cors import CORSMiddleware
 
